@@ -18,7 +18,7 @@ namespace Review_2
         }
         public void UserRegistration()
         {
-            Console.WriteLine("Your Reagistration is done successfully!!");
+            Console.WriteLine("Your Registration is done successfully!!");
         }
         public bool UserLogin(string input_name, string input_password , Student student)
         {
@@ -57,13 +57,20 @@ namespace Review_2
                 switch(choice)
                 {
                     case "1":
+                        Console.Write("Enter the name: ");
+                        string n = Console.ReadLine();
+                        Console.Write("Enter the email: ");
+                        string em = Console.ReadLine();
+                        Console.Write("Enter the password: ");
+                        string pass = Console.ReadLine();
+                        student1.UpdateUserLogin(n, em, pass,student1);
                         student1.UserRegistration();
                         Console.WriteLine();
                         break;
                     case "2":
                         Console.WriteLine("Enter Your Name: ");
                         string user_Name = Console.ReadLine();
-                        Console.WriteLine("Create and enter a Password:");
+                        Console.WriteLine("Enter the Password:");
                         string user_password = Console.ReadLine();
                         if(student1.UserLogin(user_Name, user_password,student1))
                         { 
